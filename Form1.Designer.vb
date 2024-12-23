@@ -22,31 +22,32 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Tabs = New System.Windows.Forms.TabControl()
+        Me.MainApp = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.COMMANDNAME = New System.Windows.Forms.Label()
         Me.ENTER = New System.Windows.Forms.Button()
         Me.OUTPUT = New System.Windows.Forms.Label()
         Me.INPUT = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.COMMANDNAME = New System.Windows.Forms.Label()
-        Me.Tabs.SuspendLayout()
+        Me.MultiLine = New System.Windows.Forms.TabPage()
+        Me.DocsTab = New System.Windows.Forms.TabPage()
+        Me.AboutTab = New System.Windows.Forms.TabPage()
+        Me.MainApp.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Tabs
+        'MainApp
         '
-        Me.Tabs.Controls.Add(Me.TabPage1)
-        Me.Tabs.Controls.Add(Me.TabPage2)
-        Me.Tabs.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Tabs.Location = New System.Drawing.Point(13, 13)
-        Me.Tabs.Name = "Tabs"
-        Me.Tabs.SelectedIndex = 0
-        Me.Tabs.Size = New System.Drawing.Size(382, 200)
-        Me.Tabs.TabIndex = 0
+        Me.MainApp.Controls.Add(Me.TabPage1)
+        Me.MainApp.Controls.Add(Me.MultiLine)
+        Me.MainApp.Controls.Add(Me.DocsTab)
+        Me.MainApp.Controls.Add(Me.AboutTab)
+        Me.MainApp.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.MainApp.Location = New System.Drawing.Point(13, 13)
+        Me.MainApp.Name = "MainApp"
+        Me.MainApp.SelectedIndex = 0
+        Me.MainApp.Size = New System.Drawing.Size(382, 200)
+        Me.MainApp.TabIndex = 0
         '
         'TabPage1
         '
@@ -62,6 +63,16 @@ Partial Class Form1
         Me.TabPage1.Size = New System.Drawing.Size(374, 174)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "CLI"
+        '
+        'COMMANDNAME
+        '
+        Me.COMMANDNAME.AutoSize = True
+        Me.COMMANDNAME.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.COMMANDNAME.Location = New System.Drawing.Point(324, 4)
+        Me.COMMANDNAME.Name = "COMMANDNAME"
+        Me.COMMANDNAME.Size = New System.Drawing.Size(49, 13)
+        Me.COMMANDNAME.TabIndex = 4
+        Me.COMMANDNAME.Text = "COMMAND"
         '
         'ENTER
         '
@@ -99,71 +110,59 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(323, 20)
         Me.TextBox1.TabIndex = 0
         '
-        'TabPage2
+        'MultiLine
         '
-        Me.TabPage2.Controls.Add(Me.Label3)
-        Me.TabPage2.Controls.Add(Me.Label2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(374, 174)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "About"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.MultiLine.Location = New System.Drawing.Point(4, 22)
+        Me.MultiLine.Name = "MultiLine"
+        Me.MultiLine.Padding = New System.Windows.Forms.Padding(3)
+        Me.MultiLine.Size = New System.Drawing.Size(374, 174)
+        Me.MultiLine.TabIndex = 2
+        Me.MultiLine.Text = "MLTab"
+        Me.MultiLine.UseVisualStyleBackColor = True
         '
-        'Label3
+        'DocsTab
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 145)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(337, 26)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Joke ""CLI"" written on VB.NET, source code on my GitHub!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "@PatoFlamejanteTV"
+        Me.DocsTab.Location = New System.Drawing.Point(4, 22)
+        Me.DocsTab.Name = "DocsTab"
+        Me.DocsTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.DocsTab.Size = New System.Drawing.Size(374, 174)
+        Me.DocsTab.TabIndex = 3
+        Me.DocsTab.Text = "Docs"
+        Me.DocsTab.UseVisualStyleBackColor = True
         '
-        'Label2
+        'AboutTab
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(161, 3)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "DuckVM"
-        '
-        'COMMANDNAME
-        '
-        Me.COMMANDNAME.AutoSize = True
-        Me.COMMANDNAME.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.COMMANDNAME.Location = New System.Drawing.Point(324, 4)
-        Me.COMMANDNAME.Name = "COMMANDNAME"
-        Me.COMMANDNAME.Size = New System.Drawing.Size(49, 13)
-        Me.COMMANDNAME.TabIndex = 4
-        Me.COMMANDNAME.Text = "COMMAND"
+        Me.AboutTab.Location = New System.Drawing.Point(4, 22)
+        Me.AboutTab.Name = "AboutTab"
+        Me.AboutTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.AboutTab.Size = New System.Drawing.Size(374, 174)
+        Me.AboutTab.TabIndex = 4
+        Me.AboutTab.Text = "About"
+        Me.AboutTab.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(407, 225)
-        Me.Controls.Add(Me.Tabs)
+        Me.Controls.Add(Me.MainApp)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.Tabs.ResumeLayout(False)
+        Me.MainApp.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Tabs As TabControl
+    Friend WithEvents MainApp As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents INPUT As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents OUTPUT As Label
     Friend WithEvents ENTER As Button
     Friend WithEvents COMMANDNAME As Label
+    Friend WithEvents MultiLine As TabPage
+    Friend WithEvents DocsTab As TabPage
+    Friend WithEvents AboutTab As TabPage
 End Class
